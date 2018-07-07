@@ -44,5 +44,6 @@ const calcCalories = (height, weight, age, lifestyle, gender) => {
 
 module.exports = {
 	calcImc,
+	calcShape,
 	calcCalories
 };
