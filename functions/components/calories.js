@@ -8,18 +8,16 @@ const isOverweight = (imc) => imc > 25;
 
 const lifestyleFactors = {
 	'sedentary': 1.2,
-	'work': 1.375,
-	'low_exercise': 1.55,
-	'medium_exercise': 1.725,
-	'hard_exercise': 1.9
+	'normal': 1.55,
+	'fitness': 1.9
 };
 
 const calcFemaleCalories = (height, weight, age, lifestyleFactor) =>
-	lifestyleFactor * (655 + ((9.6 * weight) + (1.8 * height) - (4.7 * age)));
+	lifestyleFactor * (655 + ((9.6 * weight) + (1.8 * height * 100) - (4.7 * age)));
 
 
 const calcMaleCalories = (height, weight, age, lifestyleFactor) =>
-	lifestyleFactor * (66 + ((13.7 * weight) + (5 * height) - (6.8 * age)));
+	lifestyleFactor * (66 + ((13.7 * weight) + (5 * height * 100) - (6.8 * age)));
 
 const calcShape = (imc) =>
 	isSkinny(imc) ? 'skinny' :
