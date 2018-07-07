@@ -1,4 +1,4 @@
-const { calcImc, calcCalories } = require("../components/calories");
+const { calcImc, calcCalories, calcShape } = require("../components/calories");
 const strings = require("./strings");
 
 const userBodyInfoHandler = assistant => {
