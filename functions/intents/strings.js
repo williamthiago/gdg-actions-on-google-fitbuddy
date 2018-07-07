@@ -36,5 +36,15 @@ module.exports = {
         ],
         GIFS: ['deaf', '404', 'say+again'],
         GIF_TITLE: 'I\'m deaf LOL'
-    }
+	},
+
+	USERBODY: {
+		MESSAGES: {
+			ALL_SET: 'All set! Now I have everything I need to continue.',
+			AMOUNT_OF_CALORIES: 'The right amount of daily calories for you is _CALORIES_',
+			SKINNY_GOALS: 'Eating all of this, you will increase about 1Kg per week. Great right?',
+			OVERWEIGHT_GOALS: 'I bet you can lose 1Kg per week, we are the champions!',
+			NORMAL_GOALS: 'You can eat this and continue in your current shape, no worries!'
+		}
+	}
 };
