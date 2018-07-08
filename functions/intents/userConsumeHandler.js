@@ -1,5 +1,7 @@
+const calories = require('../data/sample_calories');
+
 function getCaloriesOf(food) {
-	return 100;
+	return calories[food] || 400;
 }
 
 function sumConsumablesCalories(consumables) {
@@ -18,7 +20,7 @@ function sumConsumablesCalories(consumables) {
 const userConsumeHandler = (assistant) => {
 	const { date, meal, consumables } = assistant.parameters;
 
-	sumConsumablesCalories(consumables);
+	const totalCalories = sumConsumablesCalories(consumables);
 
 	assistant.ask(`Your meal have about ${totalCalories} calories`);
 };
