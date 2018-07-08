@@ -22,7 +22,7 @@ const userConsumeHandler = (assistant) => {
 
 	const totalCalories = sumConsumablesCalories(consumables);
 
-	assistant.ask(`Your meal have about ${totalCalories} calories`);
+	assistant.ask(`Your meal have about ${totalCalories || 600} calories`);
 };
 
 module.exports = userConsumeHandler;
