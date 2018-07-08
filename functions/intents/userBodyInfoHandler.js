@@ -2,9 +2,7 @@ const { calcImc, calcCalories, calcShape } = require("../components/calories");
 const strings = require("./strings");
 
 const userBodyInfoHandler = assistant => {
-  	assistant.ask('User body respondendo');
 	console.log(assistant.parameters);
-	assistant.ask(strings.USERBODY.MESSAGES.ALL_SET);
 
 	const {
 		age: { amount: age },
@@ -24,19 +22,19 @@ const userBodyInfoHandler = assistant => {
 	console.log('imc' + imc);
 	console.log('shape' + shape);
 
-	assistant.ask(strings.USERBODY.MESSAGES.AMOUNT_OF_CALORIES.replace(/_CALORIES_/g, calories));
-
-	console.log(strings.USERBODY.MESSAGES.AMOUNT_OF_CALORIES.replace(/_CALORIES_/g, calories));
-
 	let messagesByShape = {
 		'skinny': strings.USERBODY.MESSAGES.SKINNY_GOALS,
 		'overweight': strings.USERBODY.MESSAGES.OVERWEIGHT_GOALS,
 		'normal': strings.USERBODY.MESSAGES.NORMAL_GOALS
 	};
 
-	console.log(messagesByShape[shape]);
+	const message = `
+		${strings.USERBODY.MESSAGES.ALL_SET}
+		${strings.USERBODY.MESSAGES.AMOUNT_OF_CALORIES.replace(/_CALORIES_/g, calories)}
+		${messagesByShape[shape]}
+	`;
 
-	assistant.ask(messagesByShape[shape]);
+	assistant.ask(message);
 };
 
 module.exports = userBodyInfoHandler;
