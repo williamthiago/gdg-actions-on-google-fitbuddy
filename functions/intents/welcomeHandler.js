@@ -17,6 +17,8 @@ const welcomeHandler = (assistant) => {
 
 	assistant.ask(rand(strings.WELCOME[messageTime].MESSAGES));
 
+	assistant.ask(strings.WELCOME.FIRST_TIME.HELP_MESSAGE);
+
 	return fetchGif(rand(strings.WELCOME[messageTime].GIFS)).then((imageUrl) => {
 		assistant.ask(
 			new Image({
