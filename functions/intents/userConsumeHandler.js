@@ -7,7 +7,7 @@ function getCaloriesOf(food) {
 function sumConsumablesCalories(consumables) {
 	let total = 0;
 
-	for (var i = 0; i < consumables; i++) {
+	for (var i = 0; i < consumables.length; i++) {
 		const amount = consumables[i].amount || 1;
 		const calories = getCaloriesOf(consumables.consumable) * amount;
 
