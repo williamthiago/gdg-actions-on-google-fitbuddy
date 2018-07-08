@@ -34,7 +34,7 @@ const calcCalories = (height, weight, age, lifestyle, gender) => {
 	calories = Math.round(calories);
 
 	let caloriesTable = {
-		skinny: calories + 1000),
+		skinny: calories + 1000,
 		overweight: calories - 1000,
 		normal: calories
 	};
