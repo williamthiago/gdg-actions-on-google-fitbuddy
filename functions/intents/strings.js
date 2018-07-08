@@ -6,7 +6,8 @@ module.exports = {
                 'Hey ya! I can help you to take care of your meals!',
                 'Let\'s take care of your health together?',
                 'How about we plan your meals!',
-            ],
+			],
+			HELP_MESSAGE: 'I will ask some questions to know you, after that I can suggest the right amount you can consume targeting a normal IMC. To start, what\'s your age, weight, age? Or are you thing in tell me your secrets of consume?',
             GIFS: ['hello', 'hi', 'hi+strange'],
             GIF_TITLE: 'Hello!!!'
         },
