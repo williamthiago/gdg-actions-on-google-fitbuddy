@@ -9,7 +9,7 @@ function sumConsumablesCalories(consumables) {
 
 	for (var i = 0; i < consumables; i++) {
 		const amount = consumables[i].amount || 1;
-		const calories = getCaloriesOf(consumables.consumable);
+		const calories = getCaloriesOf(consumables.consumable) * amount;
 
 		total += calories;
 	}
