@@ -9,5 +9,13 @@ module.exports = {
 	sandwich: 800,
 	hamburguer: 800,
 	toast: 300,
-	'ice cream': 1600
+	'ice cream': 1600,
+	lemonade: 300,
+	orange: 400,
+	coffee: 200,
+	juice: 300,
+	soda: 900,
+	beer: 700,
+	whisky: 500,
+	tea: 100
 };
