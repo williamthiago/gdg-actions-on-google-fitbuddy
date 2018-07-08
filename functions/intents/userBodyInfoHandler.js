@@ -12,15 +12,9 @@ const userBodyInfoHandler = assistant => {
 		lifeStyle
 	} = assistant.parameters;
 
-	console.log(age, weight, height, gender, lifeStyle);
-
 	let imc = calcImc(height, weight);
 	let calories = calcCalories(height, weight, age, lifeStyle, gender);
 	let shape = calcShape(imc);
-
-	console.log('calories' + calories);
-	console.log('imc' + imc);
-	console.log('shape' + shape);
 
 	let messagesByShape = {
 		'skinny': strings.USERBODY.MESSAGES.SKINNY_GOALS,
